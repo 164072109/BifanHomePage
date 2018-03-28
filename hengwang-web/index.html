@@ -45,11 +45,11 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active">
-							<a href="#">首页</a>
+						<li class="active" onclick="$('li').removeClass('active'),this.className='active'">
+							<a  href="content1.html" target="content" >首页</a>
 						</li>
-						<li>
-							<a href="advantage.html" target="iframepage">必梵优势</a>
+						<li onclick="$('li').removeClass('active'),this.className='active'">
+							<a href="advantage.html" target="content" >必梵优势</a>
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品与服务 <span class="caret"></span></a>
@@ -71,17 +71,17 @@
 								</li>
 							</ul>
 						</li>
-						<li>
-							<a href="recruit.html">培训</a>
+						<li onclick="$('li').removeClass('active'),this.className='active'">
+							<a href="training.html" target="content">培训</a>
 						</li>
-						<li>
-							<a href="about-us.html">关于我们</a>
+						<li onclick="$('li').removeClass('active'),this.className='active'">
+							<a href="about-us.html" target="content">关于我们</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<iframe src="content1.html" id="iframepage" frameborder="0" scrolling="yes" width="100%" ></iframe>
+		<iframe src="content1.html" id="iframepage" name="content" frameborder="0" scrolling="no" width="100%" ></iframe>
 		<footer class="footer ">
 			<ul>
 				<li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
@@ -137,20 +137,18 @@
 				console.log(height);
 			}catch (ex){}
 		}
-//		window.setInterval("reinitIframe()", 200);
+		window.setInterval("reinitIframe()", 200);
 		
-		function iframeAutoFit(iframeObj){
-			setTimeout(function(){
-				if(!iframeObj) return;
-				iframeObj.height=(iframeObj.Document?iframeObj.Document.body.scrollHeight:iframeObj.contentDocument.body.offsetHeight);
-			},200)
-		}
-		function ifrmLoaded() {
-			var iframeObj = document.getElementById("iframepage");
-			iframeObj.height=(iframeObj.Document?iframeObj.Document.body.scrollHeight:iframeObj.contentDocument.body.offsetHeight);
-			console.log('hrllo')
-		}		
-	
+//		function iframeAutoFit(iframeObj){
+//			setTimeout(function(){
+//				if(!iframeObj) return;
+//				iframeObj.height=(iframeObj.Document?iframeObj.Document.body.scrollHeight:iframeObj.contentDocument.body.offsetHeight);
+//			},200)
+//		}
+//
+//		window.onload = function(){
+//			iframeAutoFit(document.getElementById("iframepage"));
+//		}
 		
 
 	</script>
