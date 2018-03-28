@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<link rel="alternate icon" type="img/hengwang-1.png" href="img/hengwang-1.png">
+		<link rel="stylesheet" href="css/amazeui.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+		<!--<link href="bootstrap/docs/examples/theme/theme.css" rel="stylesheet">-->
+		<link href="bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<script src="bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
+	</head>
+
+	<body>
+		<!--<div class="left hw-logo">
+		  <img class=" logo" src="img/bifanlogo.png"></img>
+		  <img src="img/bifanword3.png"></img>
+		  <img src="agency/oracle.png" width="100"></img>
+		  <img src="agency/cisco.png" width="100"></img>
+    </div>-->
+		<nav class="navbar navbar-default navbar-fixed-top ">
+			<div class="container">
+				<div class="navbar-header ">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+					<div class="hw-logo" style="margin-right: 2cm;">
+						<img class=" logo" src="img/bifanlogo.png"></img>
+						<img src="img/bifanword3.png"></img>
+						<img src="agency/oracle.png" width="120"></img>
+						<img src="agency/cisco.png" height="50"></img>
+					</div>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active">
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="advantage.html" target="iframepage">必梵优势</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品与服务 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">原厂代理产品（Oracle.思科.）</a>
+								</li>
+								<li>
+									<a href="#">第三方专业技术服务（数据库、中间件、操作系统）</a>
+								</li>
+								<li>
+									<a href="#"> ZABBIX+ELK+自动化运维平台</a>
+								</li>
+								<li>
+									<a href="#">数据监控产品（MAXGAUGE .APM.）</a>
+								</li>
+								<li>
+									<a href="#">数据安全产品（堡垒主机、日志审计产品及服务）</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="recruit.html">培训</a>
+						</li>
+						<li>
+							<a href="about-us.html">关于我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<iframe src="content1.html" id="iframepage" frameborder="0" scrolling="yes" width="100%" ></iframe>
+		<footer class="footer ">
+			<ul>
+				<li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
+					<div class="part-5-title">联系我们</div>
+					<div class="part-5-words2">
+						<span>商务地址:上海市普陀区平利路21弄13号101室</span>
+						<span>技术地址：上海市徐汇区吴中路1799号万象城A座601室</span>
+						<span>电话:021-31127007</span>
+						<span>传真:021-56421055</span>
+
+					</div>
+				</li>
+				<li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
+					<div class="part-5-title">相关链接</div>
+					<div class="part-5-words2">
+						<ul class="part-5-words2-ul">
+							<li class="am-u-lg-3 am-u-md-6 am-u-sm-3">
+								<a href="#" onclick="reinitIframe()">必梵优势</a>
+							</li>
+							<li class="am-u-lg-3 am-u-md-6 am-u-sm-3">
+								<a href="news.html">产品与服务</a>
+							</li>
+							<li class="am-u-lg-3 am-u-md-6 am-u-sm-3">
+								<a href="about-us.html">关于我们</a>
+							</li>
+							<li class="am-u-lg-3 am-u-md-6 am-u-sm-3">
+								<a href="recruit.html">培训</a>
+							</li>
+							<div class="clear"></div>
+						</ul>
+					</div>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</footer>
+		<script>
+			window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+		</script>
+		<script src="bootstrap/dist/js/bootstrap.js"></script>
+	</body>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/amazeui.min.js"></script>
+	<script src="js/scroll.js"></script>
+	<script type="text/javascript">
+		function reinitIframe(){
+			var iframe = document.getElementById("iframepage");
+			try{
+				var bHeight = iframe.contentWindow.document.body.scrollHeight;
+				var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+				var height = Math.max(bHeight, dHeight);
+				iframe.height = height;
+				console.log(height);
+			}catch (ex){}
+		}
+//		window.setInterval("reinitIframe()", 200);
+		
+		function iframeAutoFit(iframeObj){
+			setTimeout(function(){
+				if(!iframeObj) return;
+				iframeObj.height=(iframeObj.Document?iframeObj.Document.body.scrollHeight:iframeObj.contentDocument.body.offsetHeight);
+			},200)
+		}
+		function ifrmLoaded() {
+			var iframeObj = document.getElementById("iframepage");
+			iframeObj.height=(iframeObj.Document?iframeObj.Document.body.scrollHeight:iframeObj.contentDocument.body.offsetHeight);
+			console.log('hrllo')
+		}		
+	
+		
+
+	</script>
+
+</html>
