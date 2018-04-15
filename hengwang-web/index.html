@@ -74,7 +74,7 @@
 								</li>
 							</ul>
 						</li>
-						<li onclick="$('li').removeClass('active'),this.className='active'">
+						<li onclick="$('li').removeClass('active'),this.className='active'" id="train_li">
 							<a href="training.html" target="content">培训</a>
 						</li>
 						<li onclick="$('li').removeClass('active'),this.className='active'">
@@ -136,6 +136,11 @@
 				var bHeight = iframe.contentWindow.document.body.scrollHeight;
 				var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
 				var height = Math.max(bHeight, dHeight);
+				if($("#train_li").hasClass("active")){
+                    height = dHeight;
+				}else {
+                    height = bHeight;
+				}
 				iframe.height = height;
 				console.log(height);
 			}catch (ex){}
