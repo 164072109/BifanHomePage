@@ -18,6 +18,23 @@
 		<!--<link href="bootstrap/docs/examples/theme/theme.css" rel="stylesheet">-->
 		<link href="bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 		<script src="bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
+		<style type="text/css"> 
+				#as:link { 
+				/* font-size: 12px; */
+				color: #FFFFFF; 
+				text-decoration: none; 
+				} 
+				#as:visited { 
+				/* font-size: 12px; */
+				color: #FFFFFF; 
+				text-decoration: none; 
+				} 
+				#as:hover { 
+				/* font-size: 12px; */
+				color: #FFFFFF; 
+				text-decoration: none; 
+				} 
+		</style> 
 	</head>
 
 	<body>
@@ -99,7 +116,7 @@
 						<span>技术地址:上海市徐汇区吴中路1799号万象城A座601室</span>
 						<span>电话:021-31127007</span>
 						<span>传真:021-56421055</span>
-
+<p id="cp">©2019&nbsp;Bifan&nbsp;&nbsp;<a id="as" target="sss" href="http://www.miitbeian.gov.cn" color = "blue">沪ICP备13014386号</a>&nbsp;<i class="c-icon-icrlogo"></i>&nbsp;</p>
 					</div>
 				</li>
 				<!--<li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
@@ -139,7 +156,7 @@
 		function loadFrame(v){
 			var iframe = document.getElementById("iframepage");
 			iframe.height = 0;
-			var height = iframe.contentWindow.document.body.scrollHeight;
+			var height = iframe.contentWindow.document.body.scrollHeight + 30;
 			if($("#train_li").hasClass("active")){
 				height = 1100;
 			}
